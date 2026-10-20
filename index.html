@@ -9,21 +9,22 @@
 <body class="bg-ground font-body text-ink">
 
   <!-- ===================== EN-TÊTE ===================== -->
-  <header class="bg-ink text-white">
+  <header class="bg-ink text-cream border-b-4 border-brand-light">
     <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-8 py-5">
       <div class="flex items-center gap-3">
-        <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand">
-          <svg aria-hidden="true" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        <div class="flex h-16 w-16 items-center justify-center rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><title>yu-gi-oh-alt</title><circle cx="25.55" cy="22.55" r="2.87" fill="none" stroke="#ffbb00" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25.55" cy="22.55" r="7.58" fill="none" stroke="#ffbb00" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="#ffbb00" stroke-linecap="round" stroke-linejoin="round" d="M25.55 14.97c6.92 0 10.13 7.19 16.1 7.19h3.78c1.21 0 1.75-.59 1.23-2.37c-.46-1.58-1.67-2.03-4.25-2.03c-7.16 0-7.28-7.2-16.86-7.2s-9.7 7.2-16.86 7.2c-2.58 0-3.79.45-4.25 2.03c-.52 1.78.02 2.37 1.23 2.37h3.78c5.97 0 9.18-7.19 16.1-7.19m19.11 7.19c.99 0 2.39 1.15 2.39 2.82s-.72 2.06-2.12 2.06h-4.31c-3.29 0-3.39 7.63-15.07 7.63s-11.78-7.63-15.07-7.63H6.17c-1.4 0-2.12-.39-2.12-2.06s1.41-2.82 2.39-2.82"/><path fill="none" stroke="#ffbb00" stroke-linecap="round" stroke-linejoin="round" d="M45.62 26.99c-.37 4.27-5.4 17.3-20.07 17.3c-14.67 0-19.7-13.03-20.07-17.3m39.62-8.9C43.09 8.57 33.12 3.7 25.55 3.7S8.02 8.57 6 18.09"/><path fill="none" stroke="#ffbb00" stroke-linecap="round" stroke-linejoin="round" d="M39.13 21.73c-4 .17-1.75 8.4-13.58 8.4s-9.58-8.23-13.58-8.4"/></svg>
+
         </div>
         <div>
           <p class="font-display text-2xl font-extrabold leading-none">Mon Dex</p>
-          <p class="text-sm text-gray-300">[Votre univers] · <span id="creature-count">6</span> créatures</p>
+          <p class="text-sm text-gray-300">Yu-Gi-Oh! · <span id="creature-count">6</span> créatures</p>
         </div>
       </div>
       <nav aria-label="Navigation principale" class="flex flex-wrap gap-2">
-        <a href="#grid" class="rounded-full bg-white/10 px-4 py-2">Créatures</a>
-        <a href="#team" class="rounded-full bg-white/10 px-4 py-2">Mon équipe · <span id="team-count">0</span>/6</a>
-        <a href="#create" class="rounded-full bg-white px-4 py-2 font-bold text-ink">+ Nouvelle créature</a>
+        <a href="#grid" class="rounded-full bg-brand border-2 border-brand-light px-4 py-2">Créatures</a>
+        <a href="#team" class="rounded-full text-brand bg-ink border-2 border-brand-light px-4 py-2">Mon équipe · <span id="team-count">0</span>/6</a>
+        <a href="#create" class="rounded-full bg-brand border-2 border-brand-light px-4 py-2 font-bold text-ink">+ Nouvelle créature</a>
       </nav>
     </div>
   </header>
@@ -32,7 +33,7 @@
 
     <!-- ===================== RECHERCHE ET FILTRES ===================== -->
     <section aria-label="Recherche et filtres" class="flex flex-col gap-4">
-      <div class="flex flex-wrap items-end justify-between gap-4">
+      <div class="flex flex-wrap items-end justify-between gap-4 text-cream">
         <h1 class="font-display text-4xl font-extrabold">Trouver une créature</h1>
         <label class="flex w-full max-w-md flex-col gap-1 text-sm font-bold">
           Rechercher par nom
@@ -40,7 +41,7 @@
         </label>
       </div>
       <div id="filters" role="group" aria-label="Filtrer par type" class="flex gap-2 overflow-x-auto pb-2 md:flex-wrap md:overflow-visible">
-          <button type="button" class="chip bg-ink text-white border-ink shrink-0">Tous</button>
+          <button type="button" class="chip bg-ink text-cream border-ink shrink-0">Tous</button>
           <button type="button" class="chip shrink-0">Feu</button>
           <button type="button" class="chip shrink-0">Eau</button>
           <button type="button" class="chip shrink-0">Plante</button>
