@@ -6,7 +6,7 @@
   <title>Mon Dex</title>
   <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body class="bg-ground font-body text-ink">
+<body class=" bg-[url('/src/images/yogioh.png')] bg-cover bg-center bg-no-repeat font-body text-ink" >
 
   <!-- ===================== EN-TÊTE ===================== -->
   <header class="bg-ink text-cream border-b-4 border-brand-light"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">
@@ -37,12 +37,12 @@
         <h1 class="font-display text-4xl font-extrabold text-cream">Trouver une créature</h1>
         <label class="flex w-full max-w-md flex-col gap-1 text-sm font-bold text-cream">
           Rechercher par nom
-          <input id="search" type="search" placeholder="ex. Mossling" class="field font-normal  bg-ground border-2 border-brand-light "style="">
+          <input id="search" type="search" placeholder="ex. Mossling" class="field font-normal  bg-ground border-2 border-brand-light ">
         </label>
       </div>
       <div id="filters" role="group" aria-label="Filtrer par type" class="flex  m-2 gap-2 overflow-x-auto pb-2  [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ">
         <!-- [scrollbar-width:none] [&::-webkit-scrollbar]:hidden  this is so that i can hide the scrol bar on the phone -->
-          <button type="button" class="chip bg-brand text-cream border-brand-light shrink-0 m-2" style="box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);">Tous</button>
+          <button type="button" class="chip bg-brand text-cream border-brand-light shrink-0 m-2" style="box-shadow: 0 0 15px rgba(250, 204, 21, 0.6);">Tous</button>
           <button type="button" class="chip m-2 shrink-0">Feu</button>
           <button type="button" class="chip m-2 shrink-0">Eau</button>
           <button type="button" class="chip m-2 shrink-0">Plante</button>
@@ -170,8 +170,14 @@
         <!-- ===================== MON ÉQUIPE (INCOMPLÈTE) ===================== -->
         <section id="team" aria-label="Mon équipe" class="rounded-card bg-white p-6">
           <h2 class="font-display text-2xl font-extrabold">Mon équipe</h2>
-          <!-- TODO (Partie 1) : terminez cette section en suivant la maquette :
-               compteur x/6, 6 emplacements (vides ou remplis), message de règles. -->
+        <div class="grid min-w-0 flex-1 grid-cols-2 gap-5 mt-3 text-center sm:grid-cols-3">
+          <div class="border-dashed border-2 border-line p-6 text-center">creature</div>
+          <div class="border-dashed border-2 border-line p-6 ">creature</div>
+          <div class="border-dashed border-2 border-line p-6">creature</div>
+          <div class="border-dashed border-2 border-line p-6">creature</div>
+          <div class="border-dashed border-2 border-line p-6">creature</div>
+          <div class="border-dashed border-2 border-line p-6">creature</div>
+        </div>
         </section>
 
       </aside>
