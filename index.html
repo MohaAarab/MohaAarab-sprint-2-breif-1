@@ -34,20 +34,21 @@
     <!-- ===================== RECHERCHE ET FILTRES ===================== -->
     <section aria-label="Recherche et filtres" class="flex flex-col gap-4">
       <div class="flex flex-wrap items-end justify-between gap-4 text-cream">
-        <h1 class="font-display text-4xl font-extrabold">Trouver une créature</h1>
-        <label class="flex w-full max-w-md flex-col gap-1 text-sm font-bold">
+        <h1 class="font-display text-4xl font-extrabold text-cream">Trouver une créature</h1>
+        <label class="flex w-full max-w-md flex-col gap-1 text-sm font-bold text-cream">
           Rechercher par nom
-          <input id="search" type="search" placeholder="ex. Mossling" class="field font-normal">
+          <input id="search" type="search" placeholder="ex. Mossling" class="field font-normal  bg-ground border-2 border-brand-light "style="">
         </label>
       </div>
-      <div id="filters" role="group" aria-label="Filtrer par type" class="flex gap-2 overflow-x-auto pb-2 md:flex-wrap md:overflow-visible">
-          <button type="button" class="chip bg-ink text-cream border-ink shrink-0">Tous</button>
-          <button type="button" class="chip shrink-0">Feu</button>
-          <button type="button" class="chip shrink-0">Eau</button>
-          <button type="button" class="chip shrink-0">Plante</button>
-          <button type="button" class="chip shrink-0">Électrik</button>
-          <button type="button" class="chip shrink-0">Glace</button>
-          <button type="button" class="chip shrink-0">Ténèbres</button>
+      <div id="filters" role="group" aria-label="Filtrer par type" class="flex  m-2 gap-2 overflow-x-auto pb-2  [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ">
+        <!-- [scrollbar-width:none] [&::-webkit-scrollbar]:hidden  this is so that i can hide the scrol bar on the phone -->
+          <button type="button" class="chip bg-brand text-cream border-brand-light shrink-0 m-2" style="box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);">Tous</button>
+          <button type="button" class="chip m-2 shrink-0">Feu</button>
+          <button type="button" class="chip m-2 shrink-0">Eau</button>
+          <button type="button" class="chip m-2 shrink-0">Plante</button>
+          <button type="button" class="chip m-2 shrink-0">Électrik</button>
+          <button type="button" class="chip m-2 hrink-0">Glace</button>
+          <button type="button" class="chip m-2 shrink-0">Ténèbres</button>
       </div>
     </section>
 
