@@ -12,10 +12,7 @@ import { creatures } from "./data.js";
 // Supprimez les cartes écrites à la main dans index.html et
 // construisez la grille à partir du tableau `creatures`.
 // -------------------------------------------------------------
-// card-img for the img
-// type-img for the type of creatures
-// cre-name creature name
-// cre-type for creature type
+// this is affichaage using template
 function affich(){
 
 const container=document.querySelector('#grid');
