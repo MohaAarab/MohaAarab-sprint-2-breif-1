@@ -554,6 +554,40 @@ video {
   display: none;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 /* Bouton principal */
 
 .btn-primary {
@@ -624,6 +658,10 @@ video {
   outline-offset: 2px;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -638,6 +676,10 @@ video {
 
 .top-2 {
   top: 0.5rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .col-end-1 {
@@ -699,6 +741,10 @@ video {
 
 .h-64 {
   height: 16rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-11 {
@@ -988,6 +1034,11 @@ video {
   background-repeat: no-repeat;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-3 {
   padding: 0.75rem;
 }
@@ -1162,6 +1213,11 @@ video {
 
 .text-xl {
   font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 

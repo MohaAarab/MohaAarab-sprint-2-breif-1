@@ -1,4 +1,4 @@
-import { creatures } from "./data";
+import { creatures } from "./data.js";
 // =============================================================
 // script.js — Mon Dex
 // =============================================================
@@ -12,7 +12,37 @@ import { creatures } from "./data";
 // Supprimez les cartes écrites à la main dans index.html et
 // construisez la grille à partir du tableau `creatures`.
 // -------------------------------------------------------------
+// card-img for the img
+// type-img for the type of creatures
+// cre-name creature name
+// cre-type for creature type
+function affich(){
 
+const container=document.querySelector('#grid');
+const template=document.querySelector('#cards-template');
+
+    creatures.forEach((creature) => {
+        const clone=template.content.cloneNode(true);
+        const imgbox=clone.querySelector('.card-img')
+        const img=document.createElement('img')
+
+        img.src=creature.image
+        img.alt=creature.name
+        img.className='h-full w-full rounded-xl object-cover'
+
+        imgbox.querySelector('svg').replaceWith(img)
+        imgbox.querySelector('span').textContent=creature.id
+
+        clone.querySelector('.cre-name').textContent=creature.name;
+        clone.querySelector('.cre-type').textContent=creature.type;
+        clone.querySelector('.type-img').innerHTML=creature.icon;
+
+        container.appendChild(clone);
+        // console.log(clone)
+        // console.log(creatures);
+console.log(template);
+})};
+affich();
 
 
 // -------------------------------------------------------------
