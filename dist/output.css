@@ -693,6 +693,14 @@ video {
   height: 12rem;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
 .w-11 {
   width: 2.75rem;
 }
@@ -833,12 +841,45 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
 
+.border {
+  border-width: 1px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
 .border-b-4 {
   border-bottom-width: 4px;
+}
+
+.border-solid {
+  border-style: solid;
 }
 
 .border-dashed {
@@ -858,6 +899,11 @@ video {
 .border-line {
   --tw-border-opacity: 1;
   border-color: rgb(61 43 102 / var(--tw-border-opacity, 1));
+}
+
+.border-brand {
+  --tw-border-opacity: 1;
+  border-color: rgb(212 160 23 / var(--tw-border-opacity, 1));
 }
 
 .bg-brand {
@@ -911,6 +957,11 @@ video {
 
 .bg-\[\(\'\/src\/images\/yogioh\.png\'\)\] {
   background-color: ('/src/images/yogioh.png');
+}
+
+.bg-card {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 20 51 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[url\(\'\/path-to-your-image\.jpg\'\)\] {
@@ -977,6 +1028,14 @@ video {
   padding: 1.25rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-14 {
+  padding: 3.5rem;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -1022,6 +1081,21 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-14 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1032,6 +1106,14 @@ video {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-center {
@@ -1099,6 +1181,10 @@ video {
   font-weight: 600;
 }
 
+.font-extralight {
+  font-weight: 200;
+}
+
 .leading-none {
   line-height: 1;
 }
@@ -1136,6 +1222,16 @@ video {
 .text-muted {
   --tw-text-opacity: 1;
   color: rgb(169 155 196 / var(--tw-text-opacity, 1));
+}
+
+.text-brand-dark {
+  --tw-text-opacity: 1;
+  color: rgb(168 124 12 / var(--tw-text-opacity, 1));
+}
+
+.text-line {
+  --tw-text-opacity: 1;
+  color: rgb(61 43 102 / var(--tw-text-opacity, 1));
 }
 
 .outline-none {

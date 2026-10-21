@@ -43,12 +43,12 @@
       <div id="filters" role="group" aria-label="Filtrer par type" class="flex  m-2 gap-2 overflow-x-auto pb-2  [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ">
         <!-- [scrollbar-width:none] [&::-webkit-scrollbar]:hidden  this is so that i can hide the scrol bar on the phone -->
           <button type="button" class="chip bg-brand text-cream border-brand-light shrink-0 m-2" style="box-shadow: 0 0 15px rgba(250, 204, 21, 0.6);">Tous</button>
-          <button type="button" class="chip m-2 shrink-0">Feu</button>
-          <button type="button" class="chip m-2 shrink-0">Eau</button>
-          <button type="button" class="chip m-2 shrink-0">Plante</button>
-          <button type="button" class="chip m-2 shrink-0">Électrik</button>
-          <button type="button" class="chip m-2 hrink-0">Glace</button>
-          <button type="button" class="chip m-2 shrink-0">Ténèbres</button>
+          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Feu</button>
+          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Eau</button>
+          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Plante</button>
+          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Électrik</button>
+          <button type="button" class="chip m-2 hrink-0 bg-ink text-cream border-brand-light">Glace</button>
+          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Ténèbres</button>
       </div>
     </section>
 
@@ -58,95 +58,97 @@
       <section id="grid" aria-label="Créatures" class="grid min-w-0 flex-1 grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
 
         <!-- Carte écrite à la main : à remplacer par des cartes générées en JS (Partie 2) -->
-        <article class="flex flex-col gap-3 rounded-card bg-white p-3 pb-4">
-          <div class="relative flex h-36 items-center justify-center rounded-xl bg-brand-light">
+        <article class="flex flex-col gap-3 rounded-card bg-ground border-4 border-brand-light p-3 pb-4"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);"">
+          <div class="relative flex h-64 items-center justify-center rounded-xl bg-brand-light">
             <svg aria-hidden="true" class="h-14 w-14 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16c0-5 3.5-9 8-9s8 4 8 9"></path><circle cx="9" cy="12" r="1"></circle><circle cx="15" cy="12" r="1"></circle><path d="M7 7 5 3M17 7l2-4"></path></svg>
             <span class="absolute left-3 top-2 font-mono text-sm text-muted">#001</span>
           </div>
-          <div class="flex items-center justify-between gap-2">
-            <h3 class="font-display text-xl font-semibold">Emberkit</h3>
-            <span class="rounded-full bg-brand-light px-3 py-1 text-sm font-bold text-ink">Feu</span>
+          <div class="flex items-center flex-col gap-2 text-brand-dark">
+            <svg class="border-2 border-brand-light rounded-full "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);" fill="#d4a017" width="50px" height="50px" viewBox="-3.36 -3.36 22.72 22.72" xmlns="http://www.w3.org/2000/svg" stroke="#d4a017" stroke-width="0.00016"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M9.32 15.653a.812.812 0 0 1-.086-.855c.176-.342.245-.733.2-1.118a2.106 2.106 0 0 0-.267-.779 2.027 2.027 0 0 0-.541-.606 3.96 3.96 0 0 1-1.481-2.282c-1.708 2.239-1.053 3.51-.235 4.63a.748.748 0 0 1-.014.901.87.87 0 0 1-.394.283.838.838 0 0 1-.478.023c-1.105-.27-2.145-.784-2.85-1.603a4.686 4.686 0 0 1-.906-1.555 4.811 4.811 0 0 1-.263-1.797s-.133-2.463 2.837-4.876c0 0 3.51-2.978 2.292-5.18a.621.621 0 0 1 .112-.653.558.558 0 0 1 .623-.147l.146.058a7.63 7.63 0 0 1 2.96 3.5c.58 1.413.576 3.06.184 4.527.325-.292.596-.641.801-1.033l.029-.064c.198-.477.821-.325 1.055-.013.086.137 2.292 3.343 1.107 6.048a5.516 5.516 0 0 1-1.84 2.027 6.127 6.127 0 0 1-2.138.893.834.834 0 0 1-.472-.038.867.867 0 0 1-.381-.29zM7.554 7.892a.422.422 0 0 1 .55.146c.04.059.066.126.075.198l.045.349c.02.511.014 1.045.213 1.536.206.504.526.95.932 1.298a3.06 3.06 0 0 1 1.16 1.422c.22.564.25 1.19.084 1.773a4.123 4.123 0 0 0 1.39-.757l.103-.084c.336-.277.613-.623.813-1.017.201-.393.322-.825.354-1.269.065-1.025-.284-2.054-.827-2.972-.248.36-.59.639-.985.804-.247.105-.509.17-.776.19a.792.792 0 0 1-.439-.1.832.832 0 0 1-.321-.328.825.825 0 0 1-.035-.729c.412-.972.54-2.05.365-3.097a5.874 5.874 0 0 0-1.642-3.16c-.156 2.205-2.417 4.258-2.881 4.7a3.537 3.537 0 0 1-.224.194c-2.426 1.965-2.26 3.755-2.26 3.834a3.678 3.678 0 0 0 .459 2.043c.365.645.89 1.177 1.52 1.54C4.5 12.808 4.5 10.89 7.183 8.14l.372-.25z"></path></g></svg>
+            <h3 class="font-display text-xl font-semibold ">Emberkit</h3>
+            <span class="rounded-full bg-brand-light px-4 py-2 text-sm font-bold text-ink">Feu</span>
           </div>
           <p class="text-sm text-muted">Base · Total 309</p>
-          <button type="button" class="btn-outline">Ajouter à l'équipe</button>
+          <button type="button" class="btn-outline bg-brand text-line border-solid border-brand-light" style="box-shadow: 0 0 25px rgba(250, 204, 21, 0.6);">Ajouter à l'équipe</button>
         </article>
 
-        <!-- Carte écrite à la main : à remplacer par des cartes générées en JS (Partie 2) -->
-        <article class="flex flex-col gap-3 rounded-card bg-white p-3 pb-4">
-          <div class="relative flex h-36 items-center justify-center rounded-xl bg-brand-light">
+        <article class="flex flex-col gap-3 rounded-card bg-ground border-4 border-brand-light p-3 pb-4"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);"">
+          <div class="relative flex h-64 items-center justify-center rounded-xl bg-brand-light">
             <svg aria-hidden="true" class="h-14 w-14 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16c0-5 3.5-9 8-9s8 4 8 9"></path><circle cx="9" cy="12" r="1"></circle><circle cx="15" cy="12" r="1"></circle><path d="M7 7 5 3M17 7l2-4"></path></svg>
-            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#002</span>
+            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#001</span>
           </div>
-          <div class="flex items-center justify-between gap-2">
-            <h3 class="font-display text-xl font-semibold">Tidalix</h3>
-            <span class="rounded-full bg-brand-light px-3 py-1 text-sm font-bold text-ink">Eau</span>
+          <div class="flex items-center flex-col gap-2 text-brand-dark">
+            <svg class="border-2 border-brand-light rounded-full "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);" width="50px" height="50px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#d4a017"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Environment / Water_Drop"> <path id="Vector" d="M16.0001 13.3848C16.0001 14.6088 15.526 15.7828 14.6821 16.6483C14.203 17.1397 13.6269 17.5091 13 17.7364M19 13.6923C19 7.11538 12 2 12 2C12 2 5 7.11538 5 13.6923C5 15.6304 5.7375 17.4893 7.05025 18.8598C8.36301 20.2302 10.1436 20.9994 12.0001 20.9994C13.8566 20.9994 15.637 20.2298 16.9497 18.8594C18.2625 17.4889 19 15.6304 19 13.6923Z" stroke="#d4a017" stroke-width="1.416" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+            <h3 class="font-display text-xl font-semibold ">Tidalix</h3>
+            <span class="rounded-full bg-brand-light px-4 py-2 text-sm font-bold text-ink">Eau</span>
           </div>
-          <p class="text-sm text-muted">Base · Total 314</p>
-          <button type="button" class="btn-outline">Ajouter à l'équipe</button>
+          <p class="text-sm text-muted">Base · Total 309</p>
+          <button type="button" class="btn-outline bg-brand text-line border-solid border-brand-light" style="box-shadow: 0 0 25px rgba(250, 204, 21, 0.6);">Ajouter à l'équipe</button>
         </article>
 
-        <!-- Carte écrite à la main : à remplacer par des cartes générées en JS (Partie 2) -->
-        <article class="flex flex-col gap-3 rounded-card bg-white p-3 pb-4">
-          <div class="relative flex h-36 items-center justify-center rounded-xl bg-brand-light">
+        <article class="flex flex-col gap-3 rounded-card bg-ground border-4 border-brand-light p-3 pb-4"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);"">
+          <div class="relative flex h-64 items-center justify-center rounded-xl bg-brand-light">
             <svg aria-hidden="true" class="h-14 w-14 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16c0-5 3.5-9 8-9s8 4 8 9"></path><circle cx="9" cy="12" r="1"></circle><circle cx="15" cy="12" r="1"></circle><path d="M7 7 5 3M17 7l2-4"></path></svg>
-            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#003</span>
+            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#001</span>
           </div>
-          <div class="flex items-center justify-between gap-2">
-            <h3 class="font-display text-xl font-semibold">Mossling</h3>
-            <span class="rounded-full bg-brand-light px-3 py-1 text-sm font-bold text-ink">Plante</span>
+          <div class="flex items-center flex-col gap-2 text-brand-dark">
+            <svg class="border-2 border-brand-light rounded-full "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);" fill="#d4a017" width="50px" height="50px" viewBox="-3.36 -3.36 22.72 22.72" xmlns="http://www.w3.org/2000/svg" stroke="#d4a017" stroke-width="0.00016"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M9.32 15.653a.812.812 0 0 1-.086-.855c.176-.342.245-.733.2-1.118a2.106 2.106 0 0 0-.267-.779 2.027 2.027 0 0 0-.541-.606 3.96 3.96 0 0 1-1.481-2.282c-1.708 2.239-1.053 3.51-.235 4.63a.748.748 0 0 1-.014.901.87.87 0 0 1-.394.283.838.838 0 0 1-.478.023c-1.105-.27-2.145-.784-2.85-1.603a4.686 4.686 0 0 1-.906-1.555 4.811 4.811 0 0 1-.263-1.797s-.133-2.463 2.837-4.876c0 0 3.51-2.978 2.292-5.18a.621.621 0 0 1 .112-.653.558.558 0 0 1 .623-.147l.146.058a7.63 7.63 0 0 1 2.96 3.5c.58 1.413.576 3.06.184 4.527.325-.292.596-.641.801-1.033l.029-.064c.198-.477.821-.325 1.055-.013.086.137 2.292 3.343 1.107 6.048a5.516 5.516 0 0 1-1.84 2.027 6.127 6.127 0 0 1-2.138.893.834.834 0 0 1-.472-.038.867.867 0 0 1-.381-.29zM7.554 7.892a.422.422 0 0 1 .55.146c.04.059.066.126.075.198l.045.349c.02.511.014 1.045.213 1.536.206.504.526.95.932 1.298a3.06 3.06 0 0 1 1.16 1.422c.22.564.25 1.19.084 1.773a4.123 4.123 0 0 0 1.39-.757l.103-.084c.336-.277.613-.623.813-1.017.201-.393.322-.825.354-1.269.065-1.025-.284-2.054-.827-2.972-.248.36-.59.639-.985.804-.247.105-.509.17-.776.19a.792.792 0 0 1-.439-.1.832.832 0 0 1-.321-.328.825.825 0 0 1-.035-.729c.412-.972.54-2.05.365-3.097a5.874 5.874 0 0 0-1.642-3.16c-.156 2.205-2.417 4.258-2.881 4.7a3.537 3.537 0 0 1-.224.194c-2.426 1.965-2.26 3.755-2.26 3.834a3.678 3.678 0 0 0 .459 2.043c.365.645.89 1.177 1.52 1.54C4.5 12.808 4.5 10.89 7.183 8.14l.372-.25z"></path></g></svg>
+            <h3 class="font-display text-xl font-semibold ">Emberkit</h3>
+            <span class="rounded-full bg-brand-light px-4 py-2 text-sm font-bold text-ink">Feu</span>
           </div>
-          <p class="text-sm text-muted">Base · Total 318</p>
-          <button type="button" class="btn-outline">Ajouter à l'équipe</button>
+          <p class="text-sm text-muted">Base · Total 309</p>
+          <button type="button" class="btn-outline bg-brand text-line border-solid border-brand-light" style="box-shadow: 0 0 25px rgba(250, 204, 21, 0.6);">Ajouter à l'équipe</button>
         </article>
 
-        <!-- Carte écrite à la main : à remplacer par des cartes générées en JS (Partie 2) -->
-        <article class="flex flex-col gap-3 rounded-card bg-white p-3 pb-4">
-          <div class="relative flex h-36 items-center justify-center rounded-xl bg-brand-light">
+        <article class="flex flex-col gap-3 rounded-card bg-ground border-4 border-brand-light p-3 pb-4"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);"">
+          <div class="relative flex h-64 items-center justify-center rounded-xl bg-brand-light">
             <svg aria-hidden="true" class="h-14 w-14 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16c0-5 3.5-9 8-9s8 4 8 9"></path><circle cx="9" cy="12" r="1"></circle><circle cx="15" cy="12" r="1"></circle><path d="M7 7 5 3M17 7l2-4"></path></svg>
-            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#004</span>
+            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#001</span>
           </div>
-          <div class="flex items-center justify-between gap-2">
-            <h3 class="font-display text-xl font-semibold">Voltmaw</h3>
-            <span class="rounded-full bg-brand-light px-3 py-1 text-sm font-bold text-ink">Électrik</span>
+          <div class="flex items-center flex-col gap-2 text-brand-dark">
+            <svg class="border-2 border-brand-light rounded-full "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);" fill="#d4a017" width="50px" height="50px" viewBox="-3.36 -3.36 22.72 22.72" xmlns="http://www.w3.org/2000/svg" stroke="#d4a017" stroke-width="0.00016"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M9.32 15.653a.812.812 0 0 1-.086-.855c.176-.342.245-.733.2-1.118a2.106 2.106 0 0 0-.267-.779 2.027 2.027 0 0 0-.541-.606 3.96 3.96 0 0 1-1.481-2.282c-1.708 2.239-1.053 3.51-.235 4.63a.748.748 0 0 1-.014.901.87.87 0 0 1-.394.283.838.838 0 0 1-.478.023c-1.105-.27-2.145-.784-2.85-1.603a4.686 4.686 0 0 1-.906-1.555 4.811 4.811 0 0 1-.263-1.797s-.133-2.463 2.837-4.876c0 0 3.51-2.978 2.292-5.18a.621.621 0 0 1 .112-.653.558.558 0 0 1 .623-.147l.146.058a7.63 7.63 0 0 1 2.96 3.5c.58 1.413.576 3.06.184 4.527.325-.292.596-.641.801-1.033l.029-.064c.198-.477.821-.325 1.055-.013.086.137 2.292 3.343 1.107 6.048a5.516 5.516 0 0 1-1.84 2.027 6.127 6.127 0 0 1-2.138.893.834.834 0 0 1-.472-.038.867.867 0 0 1-.381-.29zM7.554 7.892a.422.422 0 0 1 .55.146c.04.059.066.126.075.198l.045.349c.02.511.014 1.045.213 1.536.206.504.526.95.932 1.298a3.06 3.06 0 0 1 1.16 1.422c.22.564.25 1.19.084 1.773a4.123 4.123 0 0 0 1.39-.757l.103-.084c.336-.277.613-.623.813-1.017.201-.393.322-.825.354-1.269.065-1.025-.284-2.054-.827-2.972-.248.36-.59.639-.985.804-.247.105-.509.17-.776.19a.792.792 0 0 1-.439-.1.832.832 0 0 1-.321-.328.825.825 0 0 1-.035-.729c.412-.972.54-2.05.365-3.097a5.874 5.874 0 0 0-1.642-3.16c-.156 2.205-2.417 4.258-2.881 4.7a3.537 3.537 0 0 1-.224.194c-2.426 1.965-2.26 3.755-2.26 3.834a3.678 3.678 0 0 0 .459 2.043c.365.645.89 1.177 1.52 1.54C4.5 12.808 4.5 10.89 7.183 8.14l.372-.25z"></path></g></svg>
+            <h3 class="font-display text-xl font-semibold ">Emberkit</h3>
+            <span class="rounded-full bg-brand-light px-4 py-2 text-sm font-bold text-ink">Feu</span>
           </div>
-          <p class="text-sm text-muted">Niveau 1 · Total 405</p>
-          <button type="button" class="btn-outline">Ajouter à l'équipe</button>
+          <p class="text-sm text-muted">Base · Total 309</p>
+          <button type="button" class="btn-outline bg-brand text-line border-solid border-brand-light" style="box-shadow: 0 0 25px rgba(250, 204, 21, 0.6);">Ajouter à l'équipe</button>
         </article>
 
-        <!-- Carte écrite à la main : à remplacer par des cartes générées en JS (Partie 2) -->
-        <article class="flex flex-col gap-3 rounded-card bg-white p-3 pb-4">
-          <div class="relative flex h-36 items-center justify-center rounded-xl bg-brand-light">
+        <article class="flex flex-col gap-3 rounded-card bg-ground border-4 border-brand-light p-3 pb-4"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);"">
+          <div class="relative flex h-64 items-center justify-center rounded-xl bg-brand-light">
             <svg aria-hidden="true" class="h-14 w-14 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16c0-5 3.5-9 8-9s8 4 8 9"></path><circle cx="9" cy="12" r="1"></circle><circle cx="15" cy="12" r="1"></circle><path d="M7 7 5 3M17 7l2-4"></path></svg>
-            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#005</span>
+            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#001</span>
           </div>
-          <div class="flex items-center justify-between gap-2">
-            <h3 class="font-display text-xl font-semibold">Frostail</h3>
-            <span class="rounded-full bg-brand-light px-3 py-1 text-sm font-bold text-ink">Glace</span>
+          <div class="flex items-center flex-col gap-2 text-brand-dark">
+            <svg class="border-2 border-brand-light rounded-full "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);" fill="#d4a017" width="50px" height="50px" viewBox="-3.36 -3.36 22.72 22.72" xmlns="http://www.w3.org/2000/svg" stroke="#d4a017" stroke-width="0.00016"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M9.32 15.653a.812.812 0 0 1-.086-.855c.176-.342.245-.733.2-1.118a2.106 2.106 0 0 0-.267-.779 2.027 2.027 0 0 0-.541-.606 3.96 3.96 0 0 1-1.481-2.282c-1.708 2.239-1.053 3.51-.235 4.63a.748.748 0 0 1-.014.901.87.87 0 0 1-.394.283.838.838 0 0 1-.478.023c-1.105-.27-2.145-.784-2.85-1.603a4.686 4.686 0 0 1-.906-1.555 4.811 4.811 0 0 1-.263-1.797s-.133-2.463 2.837-4.876c0 0 3.51-2.978 2.292-5.18a.621.621 0 0 1 .112-.653.558.558 0 0 1 .623-.147l.146.058a7.63 7.63 0 0 1 2.96 3.5c.58 1.413.576 3.06.184 4.527.325-.292.596-.641.801-1.033l.029-.064c.198-.477.821-.325 1.055-.013.086.137 2.292 3.343 1.107 6.048a5.516 5.516 0 0 1-1.84 2.027 6.127 6.127 0 0 1-2.138.893.834.834 0 0 1-.472-.038.867.867 0 0 1-.381-.29zM7.554 7.892a.422.422 0 0 1 .55.146c.04.059.066.126.075.198l.045.349c.02.511.014 1.045.213 1.536.206.504.526.95.932 1.298a3.06 3.06 0 0 1 1.16 1.422c.22.564.25 1.19.084 1.773a4.123 4.123 0 0 0 1.39-.757l.103-.084c.336-.277.613-.623.813-1.017.201-.393.322-.825.354-1.269.065-1.025-.284-2.054-.827-2.972-.248.36-.59.639-.985.804-.247.105-.509.17-.776.19a.792.792 0 0 1-.439-.1.832.832 0 0 1-.321-.328.825.825 0 0 1-.035-.729c.412-.972.54-2.05.365-3.097a5.874 5.874 0 0 0-1.642-3.16c-.156 2.205-2.417 4.258-2.881 4.7a3.537 3.537 0 0 1-.224.194c-2.426 1.965-2.26 3.755-2.26 3.834a3.678 3.678 0 0 0 .459 2.043c.365.645.89 1.177 1.52 1.54C4.5 12.808 4.5 10.89 7.183 8.14l.372-.25z"></path></g></svg>
+            <h3 class="font-display text-xl font-semibold ">Emberkit</h3>
+            <span class="rounded-full bg-brand-light px-4 py-2 text-sm font-bold text-ink">Feu</span>
           </div>
-          <p class="text-sm text-muted">Niveau 1 · Total 420</p>
-          <button type="button" class="btn-outline">Ajouter à l'équipe</button>
+          <p class="text-sm text-muted">Base · Total 309</p>
+          <button type="button" class="btn-outline bg-brand text-line border-solid border-brand-light" style="box-shadow: 0 0 25px rgba(250, 204, 21, 0.6);">Ajouter à l'équipe</button>
         </article>
 
-        <!-- Carte écrite à la main : à remplacer par des cartes générées en JS (Partie 2) -->
-        <article class="flex flex-col gap-3 rounded-card bg-white p-3 pb-4">
-          <div class="relative flex h-36 items-center justify-center rounded-xl bg-brand-light">
+        <article class="flex flex-col gap-3 rounded-card bg-ground border-4 border-brand-light p-3 pb-4"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);"">
+          <div class="relative flex h-64 items-center justify-center rounded-xl bg-brand-light">
             <svg aria-hidden="true" class="h-14 w-14 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16c0-5 3.5-9 8-9s8 4 8 9"></path><circle cx="9" cy="12" r="1"></circle><circle cx="15" cy="12" r="1"></circle><path d="M7 7 5 3M17 7l2-4"></path></svg>
-            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#006</span>
+            <span class="absolute left-3 top-2 font-mono text-sm text-muted">#001</span>
           </div>
-          <div class="flex items-center justify-between gap-2">
-            <h3 class="font-display text-xl font-semibold">Duskwing</h3>
-            <span class="rounded-full bg-brand-light px-3 py-1 text-sm font-bold text-ink">Ténèbres</span>
+          <div class="flex items-center flex-col gap-2 text-brand-dark">
+            <svg class="border-2 border-brand-light rounded-full "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);" fill="#d4a017" width="50px" height="50px" viewBox="-3.36 -3.36 22.72 22.72" xmlns="http://www.w3.org/2000/svg" stroke="#d4a017" stroke-width="0.00016"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M9.32 15.653a.812.812 0 0 1-.086-.855c.176-.342.245-.733.2-1.118a2.106 2.106 0 0 0-.267-.779 2.027 2.027 0 0 0-.541-.606 3.96 3.96 0 0 1-1.481-2.282c-1.708 2.239-1.053 3.51-.235 4.63a.748.748 0 0 1-.014.901.87.87 0 0 1-.394.283.838.838 0 0 1-.478.023c-1.105-.27-2.145-.784-2.85-1.603a4.686 4.686 0 0 1-.906-1.555 4.811 4.811 0 0 1-.263-1.797s-.133-2.463 2.837-4.876c0 0 3.51-2.978 2.292-5.18a.621.621 0 0 1 .112-.653.558.558 0 0 1 .623-.147l.146.058a7.63 7.63 0 0 1 2.96 3.5c.58 1.413.576 3.06.184 4.527.325-.292.596-.641.801-1.033l.029-.064c.198-.477.821-.325 1.055-.013.086.137 2.292 3.343 1.107 6.048a5.516 5.516 0 0 1-1.84 2.027 6.127 6.127 0 0 1-2.138.893.834.834 0 0 1-.472-.038.867.867 0 0 1-.381-.29zM7.554 7.892a.422.422 0 0 1 .55.146c.04.059.066.126.075.198l.045.349c.02.511.014 1.045.213 1.536.206.504.526.95.932 1.298a3.06 3.06 0 0 1 1.16 1.422c.22.564.25 1.19.084 1.773a4.123 4.123 0 0 0 1.39-.757l.103-.084c.336-.277.613-.623.813-1.017.201-.393.322-.825.354-1.269.065-1.025-.284-2.054-.827-2.972-.248.36-.59.639-.985.804-.247.105-.509.17-.776.19a.792.792 0 0 1-.439-.1.832.832 0 0 1-.321-.328.825.825 0 0 1-.035-.729c.412-.972.54-2.05.365-3.097a5.874 5.874 0 0 0-1.642-3.16c-.156 2.205-2.417 4.258-2.881 4.7a3.537 3.537 0 0 1-.224.194c-2.426 1.965-2.26 3.755-2.26 3.834a3.678 3.678 0 0 0 .459 2.043c.365.645.89 1.177 1.52 1.54C4.5 12.808 4.5 10.89 7.183 8.14l.372-.25z"></path></g></svg>
+            <h3 class="font-display text-xl font-semibold ">Emberkit</h3>
+            <span class="rounded-full bg-brand-light px-4 py-2 text-sm font-bold text-ink">Feu</span>
           </div>
-          <p class="text-sm text-muted">Niveau 2 · Total 525</p>
-          <button type="button" class="btn-outline">Ajouter à l'équipe</button>
+          <p class="text-sm text-muted">Base · Total 309</p>
+          <button type="button" class="btn-outline bg-brand text-line border-solid border-brand-light" style="box-shadow: 0 0 25px rgba(250, 204, 21, 0.6);">Ajouter à l'équipe</button>
         </article>
+
 
       </section>
 
       <aside class="flex w-full min-w-0 flex-col gap-6 lg:w-[420px] lg:shrink-0">
 
         <!-- ===================== PANNEAU DE DÉTAIL ===================== -->
-        <section id="detail" aria-label="Détail de la créature" class="flex flex-col gap-4 rounded-card flex border-2 border-ink bg-white p-4 md:p-6 ">
+        <section id="detail" aria-label="Détail de la créature" class="flex flex-col gap-4 rounded-card border-4 border-brand-light bg-ground p-4 md:p-6 "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">
           <div class="flex items-center justify-between">
             <span class="font-mono text-sm text-muted">#003 · Détail</span>
             <button type="button" aria-label="Fermer le détail" class="btn-outline w-11 px-0">✕</button>
@@ -155,51 +157,55 @@
             <svg aria-hidden="true" class="h-20 w-20 text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16c0-5 3.5-9 8-9s8 4 8 9"></path><circle cx="9" cy="12" r="1"></circle><circle cx="15" cy="12" r="1"></circle><path d="M7 7 5 3M17 7l2-4"></path></svg>
           </div>
           <div class="flex flex-wrap justify-between">
-            <h2 class="font-display text-3xl font-extrabold">Mossling</h2>
+            <h2 class="font-display text-3xl font-extrabold text-brand">Mossling</h2>
             <span class="rounded-full bg-brand-light px-3 py-1 text-sm font-bold">Plante</span>
           </div>
-          <p class="text-gray-700">Une créature calme qui dort sous les feuilles mortes et se réveille quand il pleut.</p>
-          <div class="flex flex-col gap-2 text-sm">
+          <p class="text-cream">Une créature calme qui dort sous les feuilles mortes et se réveille quand il pleut.</p>
+          <div class="flex flex-col gap-2 text-sm text-cream">
             <div class="grid grid-cols-[80px_1fr_40px] items-center gap-2"><span class="font-bold">PV</span><span class="h-3 rounded-full bg-ground"><span class="block h-3 w-[30%] rounded-full bg-brand"></span></span><span class="text-right font-mono">45</span></div>
             <div class="grid grid-cols-[80px_1fr_40px] items-center gap-2"><span class="font-bold">Attaque</span><span class="h-3 rounded-full bg-ground"><span class="block h-3 w-[33%] rounded-full bg-brand"></span></span><span class="text-right font-mono">49</span></div>
             <div class="grid grid-cols-[80px_1fr_40px] items-center gap-2"><span class="font-bold">Défense</span><span class="h-3 rounded-full bg-ground"><span class="block h-3 w-[43%] rounded-full bg-brand"></span></span><span class="text-right font-mono">65</span></div>
           </div>
-          <button type="button" class="btn-primary">Ajouter à l'équipe</button>
+          <button type="button" class="btn-primary text-line border-2 border-brand-light"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">Ajouter à l'équipe</button>
         </section>
 
         <!-- ===================== MON ÉQUIPE (INCOMPLÈTE) ===================== -->
-        <section id="team" aria-label="Mon équipe" class="rounded-card bg-white p-6">
-          <h2 class="font-display text-2xl font-extrabold">Mon équipe</h2>
-        <div class="grid min-w-0 flex-1 grid-cols-2 gap-5 mt-3 text-center sm:grid-cols-3">
-          <div class="border-dashed border-2 border-line p-6 text-center">creature</div>
-          <div class="border-dashed border-2 border-line p-6 ">creature</div>
-          <div class="border-dashed border-2 border-line p-6">creature</div>
-          <div class="border-dashed border-2 border-line p-6">creature</div>
-          <div class="border-dashed border-2 border-line p-6">creature</div>
-          <div class="border-dashed border-2 border-line p-6">creature</div>
+        <section id="team" aria-label="Mon équipe" class="rounded-card bg-ground p-6 border-4 border-brand-light"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">
+          <div class="flex justify-between">
+            <h2 class="font-display text-2xl font-extrabold text-cream">Mon équipe</h2>
+          <div class="border border-brand-light rounded-2xl px-2 py-2 text-brand">0/6</div>
+          </div>
+        <div class="grid min-w-0 flex-1 grid-cols-2 gap-5 mt-3 text-center text-cream sm:grid-cols-3">
+          <div class="border-dashed border-2 border-brand-light p-6 text-4xl text-brand">+</div>
+          <div class="border-dashed border-2 border-brand-light p-6 text-4xl text-brand">+</div>
+          <div class="border-dashed border-2 border-brand-light p-6 text-4xl text-brand">+</div>
+          <div class="border-dashed border-2 border-brand-light p-6 text-4xl text-brand">+</div>
+          <div class="border-dashed border-2 border-brand-light p-6 text-4xl text-brand">+</div>
+          <div class="border-dashed border-2 border-brand-light p-6 text-4xl text-brand">+</div>
         </div>
+        <div class=" text-center text-brand pt-5">no creature</div>
         </section>
 
       </aside>
     </div>
 
     <!-- ===================== FORMULAIRE DE CRÉATION ===================== -->
-    <section id="create" aria-label="Nouvelle créature" class="flex flex-col gap-6 rounded-card bg-white p-8">
+    <section id="create" aria-label="Nouvelle créature" class="flex flex-col gap-6 rounded-card bg-ground border-2 border-brand-light p-8"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">
       <div>
-        <h2 class="font-display text-3xl font-extrabold">Nouvelle créature</h2>
+        <h2 class="font-display text-3xl font-extrabold text-cream">Nouvelle créature</h2>
         <p class="text-muted">Chaque champ est vérifié avant l'ajout de la créature.</p>
       </div>
-      <form id="creature-form" novalidate class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <form id="creature-form" novalidate class="grid grid-cols-1 gap-5 text-cream  md:grid-cols-2 lg:grid-cols-4">
         <label class="flex flex-col gap-1 text-sm font-bold">Numéro
-          <input name="id" type="text" placeholder="#010" class="field font-normal">
+          <input name="id" type="text" placeholder="#010" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Nom
-          <input name="name" type="text" placeholder="Nom de la créature" class="field font-normal">
+          <input name="name" type="text" placeholder="Nom de la créature" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Type
-          <select name="type" class="field font-normal">
+          <select name="type" class="field font-normal border border-brand-light bg-ink">
             <option value="">Choisir un type</option>
             <option>Feu</option><option>Eau</option><option>Plante</option>
             <option>Électrik</option><option>Glace</option><option>Ténèbres</option>
@@ -207,32 +213,32 @@
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Niveau
-          <input name="level" type="text" placeholder="Base, Niveau 1…" class="field font-normal">
+          <input name="level" type="text" placeholder="Base, Niveau 1…" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Statistique 1
-          <input name="stat1" type="text" placeholder="0 à 999" class="field font-normal">
+          <input name="stat1" type="text" placeholder="0 à 999" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Statistique 2
-          <input name="stat2" type="text" placeholder="0 à 999" class="field font-normal">
+          <input name="stat2" type="text" placeholder="0 à 999" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Statistique 3
-          <input name="stat3" type="text" placeholder="0 à 999" class="field font-normal">
+          <input name="stat3" type="text" placeholder="0 à 999" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Lien de l'image
-          <input name="image" type="text" placeholder="https://…/image.png" class="field font-normal">
+          <input name="image" type="text" placeholder="https://…/image.png" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold md:col-span-2 lg:col-span-4">Description
-          <textarea name="description" rows="3" placeholder="10 à 200 caractères" class="rounded-xl border-2 border-line p-3 font-normal outline-none"></textarea>
+          <textarea name="description" rows="3" placeholder="10 à 200 caractères" class="rounded-xl border border-brand-light bg-ink p-3 font-normal outline-none"></textarea>
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <div class="flex flex-wrap justify-end gap-3 md:col-span-2 lg:col-span-4">
-          <button type="reset" class="btn-outline px-6">Effacer</button>
-          <button type="submit" class="btn-primary">Ajouter la créature</button>
+          <button type="reset" class="btn-outline px-6 bg-ground text-cream border border-brand-light">Effacer</button>
+          <button type="submit" class="btn-primary border border-brand-light"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">Ajouter la créature</button>
         </div>
       </form>
     </section>
@@ -240,7 +246,7 @@
   </main>
 
   <footer class="mx-auto max-w-7xl px-8 pb-10 text-sm text-muted">
-    Images : [source des images de votre univers]. Projet de fans réalisé dans le cadre d'une formation.
+    Images : ygoprodeck.com. Projet de fans réalisé dans le cadre d'une formation.
   </footer>
 
   <!-- data.js (à créer) doit être chargé AVANT script.js -->
