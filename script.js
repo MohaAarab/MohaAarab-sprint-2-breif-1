@@ -33,6 +33,7 @@ const template=document.querySelector('#cards-template');
         clone.querySelector('.cre-name').textContent=creature.name;
         clone.querySelector('.cre-type').textContent=creature.type;
         clone.querySelector('.type-img').innerHTML=creature.icon;
+        clone.querySelector('.cre-niv').textContent=creature.level
 
         container.appendChild(clone);
         // console.log(clone)
@@ -47,8 +48,15 @@ affich();
 // Un clic sur une carte ouvre le panneau de détail :
 // image, description, et statistiques affichées en barres.
 // -------------------------------------------------------------
+// function detail(){
 
+//     creatures.forEach((creature))=>{
+//         const id=creature.id
 
+//     }
+ 
+// }
+// detail()
 // -------------------------------------------------------------
 // 3. RECHERCHE
 // La liste se met à jour pendant la saisie d'un nom
