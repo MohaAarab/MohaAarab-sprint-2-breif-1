@@ -1248,9 +1248,34 @@ video {
   background-color: rgb(245 236 214 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-brand:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 160 23 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-ground:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 10 31 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-line:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 43 102 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-ink:hover {
+  --tw-text-opacity: 1;
+  color: rgb(11 6 21 / var(--tw-text-opacity, 1));
+}
+
+.group:hover .group-hover\:text-ink {
+  --tw-text-opacity: 1;
+  color: rgb(11 6 21 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 640px) {
