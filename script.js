@@ -13,10 +13,10 @@ import { creatures } from "./data.js";
 // construisez la grille à partir du tableau `creatures`.
 // -------------------------------------------------------------
 
-function affich() {
-  const container = document.querySelector('#grid');
+function affich(list = creatures) {
+    const container = document.querySelector('#grid');
 
-  container.innerHTML = creatures.map((creature) => `
+  container.innerHTML = list.map((creature) => `
     <article data-id="${creature.id}" class="cursor-pointer flex flex-col gap-3 rounded-card bg-ground border-4 border-brand-light p-3 pb-4 transition duration-300 hover:-translate-y-2 shadow-[0_0_30px_rgba(250,204,21,0.6)] hover:shadow-[0_0_45px_rgba(250,204,21,0.9)]">
       <div class="card-img relative flex h-64 items-center justify-center rounded-xl bg-brand-light">
         <img class="h-full w-full rounded-xl object-cover" src="${creature.image}" alt="${creature.name}" loading="lazy">
@@ -103,20 +103,28 @@ grid.addEventListener('click',(e) =>{
     })
 })
 // event listner fo the close button
-const detailPanel = document.querySelector('#detail');
+const detailPanel = document.querySelector('#detail')
 
 detailPanel.addEventListener('click', (e) => {
   if (e.target.closest('.btn-close')) {
-    detailPanel.classList.add('hidden');
+    detailPanel.classList.add('hidden')
   }
-});
+})
 
 // -------------------------------------------------------------
 // 3. RECHERCHE
 // La liste se met à jour pendant la saisie d'un nom
 // (sans tenir compte des majuscules).
 // -------------------------------------------------------------
-
+const rech=document.querySelector('#search');
+rech.addEventListener('input',(event)=>{
+    const search=event.target.value.toLowerCase()
+  
+    const res=creatures.filter((creature)=>{
+       return creature.name.toLowerCase().includes(search)
+    })
+    affich(res)
+})
 
 // -------------------------------------------------------------
 // 4. FILTRE
