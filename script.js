@@ -62,7 +62,7 @@ const max = 5000;
     detail.innerHTML=""
     
     detail.innerHTML=`
-
+        <section  aria-label="Détail de la créature" class="flex flex-col gap-4 rounded-card border-4 border-brand-light bg-ground p-4 md:p-6 "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">  
           <div class="flex items-center justify-between">
             <span class="font-mono text-sm text-muted">${creature.id} · Détail</span>
             <button type="button" aria-label="Fermer le détail" class="btn-close btn-outline w-11 px-0">✕</button>
@@ -81,6 +81,8 @@ const max = 5000;
             <div class="grid grid-cols-[80px_1fr_40px] items-center gap-2"><span class="font-bold">Défense</span><span class="h-3 rounded-full bg-ground"><span class="block h-3 rounded-full bg-brand" style="width: ${defPerc}%"></span></span><span class="text-right font-mono">${creature.stats.defence}</span></div>
           </div>
           <button type="button" class="btn-primary text-line border-2 border-brand-light"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">Ajouter à l'équipe</button>
+        </section>
+
 
     `
 }
