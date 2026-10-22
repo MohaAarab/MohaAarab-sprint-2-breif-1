@@ -711,6 +711,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-14 {
   height: 3.5rem;
 }
@@ -737,6 +741,14 @@ video {
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-80 {
+  height: 20rem;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .w-11 {
@@ -769,6 +781,62 @@ video {
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-\[\%\] {
+  width: %;
+}
+
+.w-\[\(\$\{creature\.stats\.attack\}\*100\%\)\%\] {
+  width: (${creature.stats.attack}*100%)%;
+}
+
+.w-\[\(\$\{creature\.stats\.attack\}\*100\%\)\/5000\%\] {
+  width: (${creature.stats.attack}*100%)/5000%;
+}
+
+.w-\[\(\(\$\{creature\.stats\.attack\}\*100\%\)\/5000\)\%\] {
+  width: ((${creature.stats.attack}*100%)/5000)%;
+}
+
+.w-\[\(\)\%\] {
+  width: ()%;
+}
+
+.w-\[\(p\)\%\] {
+  width: (p)%;
+}
+
+.w-\[\(perc\)\%\] {
+  width: (perc)%;
+}
+
+.w-\[\(perc\(\)\)\%\] {
+  width: (perc())%;
+}
+
+.w-\[\(perc\(\$\{creature\.stats\.attack\}\)\)\%\] {
+  width: (perc(${creature.stats.attack}))%;
+}
+
+.w-\[44\%\] {
+  width: 44%;
+}
+
+.w-\[per\%\] {
+  width: per%;
+}
+
+.w-\[perc\%\] {
+  width: perc%;
+}
+
+.w-\[perc\(\)\%\] {
+  width: perc()%;
+}
+
+.w-\[perc\(\$\{creature\.stats\.attack\}\)\%\] {
+  width: perc(${creature.stats.attack})%;
 }
 
 .min-w-0 {

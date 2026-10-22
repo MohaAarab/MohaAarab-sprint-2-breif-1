@@ -146,6 +146,16 @@ export const creatures = [
     stats: { hp: 450, attack: 80, defence: 200 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/15025844.jpg",
     description: "Une elfe discrète qui protège ses alliés. Elle n'attaque pas beaucoup mais sa défense est solide."
-  }
+  },
+  {
+  id: "#013",
+  name: "Obélisque le Tourmenteur",
+  type: "Divin",
+  icon: devin,
+  level: "Niveau 10",
+  stats: { hp: 999, attack: 4000, defence: 4000 },
+  image: "https://images.ygoprodeck.com/images/cards_cropped/10000000.jpg",
+  description: "Un dieu égyptien d'une puissance colossale. Ses 4000 points d'ATK et de DEF en font un adversaire redoutable, capable de détruire tous les monstres adverses en sacrifiant deux monstres."
+}
 ];
  
