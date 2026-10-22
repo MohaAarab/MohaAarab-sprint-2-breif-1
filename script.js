@@ -117,14 +117,23 @@ detailPanel.addEventListener('click', (e) => {
 // (sans tenir compte des majuscules).
 // -------------------------------------------------------------
 const rech=document.querySelector('#search');
-rech.addEventListener('input',(event)=>{
-    const search=event.target.value.toLowerCase()
-  
-    const res=creatures.filter((creature)=>{
-       return creature.name.toLowerCase().includes(search)
-    })
-    affich(res)
-})
+const tpSelect=document.querySelector('#typeFilter')
+
+function searchFilter(){
+
+    const text = rech.value.toLowerCase().trim();
+    const type = tpSelect.value;
+    
+      const res=creatures.filter((creature)=>{
+         const perName= creature.name.toLowerCase().includes(text)
+         const perType= type === 'Tous' || creature.type === type
+
+         return perName && perType
+      })
+      affich(res)
+  }
+  rech.addEventListener('input', searchFilter)
+  tpSelect.addEventListener('change', searchFilter)
 
 // -------------------------------------------------------------
 // 4. FILTRE

@@ -35,21 +35,40 @@
     <section aria-label="Recherche et filtres" class="flex flex-col gap-4">
       <div class="flex flex-wrap items-end justify-between gap-4 text-cream">
         <h1 class="font-display text-4xl font-extrabold text-cream">Trouver une créature</h1>
-        <label class="flex w-full max-w-md flex-col gap-1 text-sm font-bold text-cream">
+        <!-- <label class="flex w-full max-w-md flex-col gap-1 text-sm font-bold text-cream">
           Rechercher par nom
           <input id="search" type="search" placeholder="ex. Mossling" class="field font-normal  bg-ground border-2 border-brand-light ">
-        </label>
+        </label> -->
       </div>
-      <div id="filters" role="group" aria-label="Filtrer par type" class="flex  m-2 gap-2 overflow-x-auto pb-2  [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ">
-        <!-- [scrollbar-width:none] [&::-webkit-scrollbar]:hidden  this is so that i can hide the scrol bar on the phone -->
-          <button type="button" class="chip bg-brand text-cream border-brand-light shrink-0 m-2" style="box-shadow: 0 0 15px rgba(250, 204, 21, 0.6);">Tous</button>
-          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Feu</button>
-          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Eau</button>
-          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Plante</button>
-          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Électrik</button>
-          <button type="button" class="chip m-2 hrink-0 bg-ink text-cream border-brand-light">Glace</button>
-          <button type="button" class="chip m-2 shrink-0 bg-ink text-cream border-brand-light">Ténèbres</button>
-      </div>
+
+      <div id="filters" class="flex flex-col gap-3 m-2 sm:flex-row">
+  <label for="search" class="sr-only">Rechercher par nom</label>
+  <input id="search" type="search" placeholder="Rechercher un nom..." class="w-full rounded-lg border border-brand-light bg-ink text-cream px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+ />
+
+  <label for="typeFilter" class="sr-only">Filtrer par type</label>
+  <select id="typeFilter" class="w-full sm:w-64 rounded-lg border border-brand-light bg-ink text-cream px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+  >
+    <option value="Tous">Tous les types</option>
+    <option value="Bête">Bête</option>
+    <option value="Bête-Guerrier">Bête-Guerrier</option>
+    <option value="Dieu Créateur">Dieu Créateur</option>
+    <option value="Cyberse">Cyberse</option>
+    <option value="Dinosaure">Dinosaure</option>
+    <option value="Bête Divine">Bête Divine</option>
+    <option value="Dragon">Dragon</option>
+    <option value="Démon">Démon</option>
+    <option value="Poisson">Poisson</option>
+    <option value="Insecte">Insecte</option>
+    <option value="Machine">Machine</option>
+    <option value="Rocheux">Rocheux</option>
+    <option value="Serpent de mer">Serpent de mer</option>
+    <option value="Magicien">Magicien</option>
+    <option value="Tonnerre">Tonnerre</option>
+    <option value="Guerrier">Guerrier</option>
+    <option value="Bête Ailée">Bête Ailée</option>
+  </select>
+</div>
     </section>
 
     <div class="flex flex-col gap-8 lg:flex-row lg:items-start">
