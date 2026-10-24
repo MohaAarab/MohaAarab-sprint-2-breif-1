@@ -6,7 +6,7 @@
   <title>Mon Dex</title>
   <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body class=" bg-[url('/src/images/yogioh.png')] bg-cover bg-center bg-no-repeat font-body text-ink" >
+<body class=" bg-[url('/src/images/yogioh.png')] bg-cover bg-fixed bg-center bg-no-repeat font-body text-ink" >
 
   <!-- ===================== EN-TÊTE ===================== -->
   <header class="bg-ink text-cream border-b-4 border-brand-light"style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">
@@ -148,40 +148,56 @@
         <p class="text-muted">Chaque champ est vérifié avant l'ajout de la créature.</p>
       </div>
       <form id="creature-form" novalidate class="grid grid-cols-1 gap-5 text-cream  md:grid-cols-2 lg:grid-cols-4">
-        <label class="flex flex-col gap-1 text-sm font-bold">Numéro
-          <input name="id" type="text" placeholder="#010" class="field font-normal border border-brand-light bg-ink">
-          <span class="error-message text-sm font-normal text-muted"></span>
+        <label class="flex flex-col gap-1 text-sm font-bold " >ID
+          <input name="id" id="id" type="text" placeholder="#010" class="field font-normal border border-brand-light bg-ink invalid:" >
+          <span id="idError" class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Nom
-          <input name="name" type="text" placeholder="Nom de la créature" class="field font-normal border border-brand-light bg-ink">
-          <span class="error-message text-sm font-normal text-muted"></span>
+          <input name="name" id="name" type="text" placeholder="Nom de la créature" class="field font-normal border border-brand-light bg-ink">
+          <span id="nameError" class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Type
-          <select name="type" class="field font-normal border border-brand-light bg-ink">
+          <select name="type" id="type" class="field font-normal border border-brand-light bg-ink">
             <option value="">Choisir un type</option>
-            <option>Feu</option><option>Eau</option><option>Plante</option>
-            <option>Électrik</option><option>Glace</option><option>Ténèbres</option>
+                <option value="Tous">Tous les types</option>
+                <option value="Bête">Bête</option>
+                <option value="Bête-Guerrier">Bête-Guerrier</option>
+                <option value="Dieu Créateur">Dieu Créateur</option>
+                <option value="Cyberse">Cyberse</option>
+                <option value="Dinosaure">Dinosaure</option>
+                <option value="Bête Divine">Bête Divine</option>
+                <option value="Dragon">Dragon</option>
+                <option value="Démon">Démon</option>
+                <option value="Poisson">Poisson</option>
+                <option value="Insecte">Insecte</option>
+                <option value="Machine">Machine</option>
+                <option value="Rocheux">Rocheux</option>
+                <option value="Serpent de mer">Serpent de mer</option>
+                <option value="Magicien">Magicien</option>
+                <option value="Tonnerre">Tonnerre</option>
+                <option value="Guerrier">Guerrier</option>
+                <option value="Bête Ailée">Bête Ailée</option>
           </select>
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Niveau
-          <input name="level" type="text" placeholder="Base, Niveau 1…" class="field font-normal border border-brand-light bg-ink">
+          <input name="level" id="level" type="text" placeholder="Base, Niveau 1…" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
-        <label class="flex flex-col gap-1 text-sm font-bold">Statistique 1
-          <input name="stat1" type="text" placeholder="0 à 999" class="field font-normal border border-brand-light bg-ink">
+        <!-- <label class="flex flex-col gap-1 text-sm font-bold">HP
+          <input name="stat1" id="hp" type="text" placeholder="0 à 999" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
+        </label> -->
+        <label class="flex flex-col gap-1 text-sm font-bold">Attaque
+          <input name="stat2" id="attack" type="text" placeholder="0 à 999" class="field font-normal border border-brand-light bg-ink">
+          <span id="attackError" class="error-message text-sm font-normal text-muted"></span>
         </label>
-        <label class="flex flex-col gap-1 text-sm font-bold">Statistique 2
-          <input name="stat2" type="text" placeholder="0 à 999" class="field font-normal border border-brand-light bg-ink">
-          <span class="error-message text-sm font-normal text-muted"></span>
-        </label>
-        <label class="flex flex-col gap-1 text-sm font-bold">Statistique 3
-          <input name="stat3" type="text" placeholder="0 à 999" class="field font-normal border border-brand-light bg-ink">
-          <span class="error-message text-sm font-normal text-muted"></span>
+        <label class="flex flex-col gap-1 text-sm font-bold">Defence
+          <input name="stat3" id="defence" type="text" placeholder="0 à 999" class="field font-normal border border-brand-light bg-ink">
+          <span id="defenceError" class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold">Lien de l'image
-          <input name="image" type="text" placeholder="https://…/image.png" class="field font-normal border border-brand-light bg-ink">
+          <input name="image" id="img" type="text" placeholder="https://…/image.png" class="field font-normal border border-brand-light bg-ink">
           <span class="error-message text-sm font-normal text-muted"></span>
         </label>
         <label class="flex flex-col gap-1 text-sm font-bold md:col-span-2 lg:col-span-4">Description
@@ -190,7 +206,7 @@
         </label>
         <div class="flex flex-wrap justify-end gap-3 md:col-span-2 lg:col-span-4">
           <button type="reset" class="btn-outline px-6 bg-ground text-cream border border-brand-light hover:text-ink hover:bg-brand">Effacer</button>
-          <button type="submit" class="btn-primary border border-brand-light hover:bg-line "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">Ajouter la créature</button>
+          <button type="submit" id="add_creature" class="btn-primary border border-brand-light hover:bg-line "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">Ajouter la créature</button>
         </div>
       </form>
     </section>

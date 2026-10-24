@@ -9,7 +9,7 @@
 //   name: "Exemple",                              // texte
 //   type: "Feu",                                  // une valeur d'une liste fixe
 //   level: "Base",                                // texte
-//   stats: { hp: 45, attack: 49, defence: 49 },   // 3 nombres de 0 à 999
+  // stats: {ttack: 49, defence: 49 },   // 3 nombres de 0 à 999
 //   image: "https://example.com/001.png",         // lien https vers une image
 //   description: "Une courte description."        // 10 à 200 caractères
 // }
@@ -79,7 +79,7 @@ export const creatures = [
     type: "Bête",
     icon: icons.beast,
     level: "Niveau 4",
-    stats: { hp: 500, attack: 110, defence: 90 },
+    stats: {attack: 110, defence: 90 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/86569121.jpg",
     description: "Une gazelle rapide qui court plus vite que le vent. Les autres bêtes la respectent comme une reine."
   },
@@ -89,7 +89,7 @@ export const creatures = [
     type: "Bête-Guerrier",
     icon: icons.beastWarrior,
     level: "Niveau 4",
-    stats: { hp: 550, attack: 170, defence: 100 },
+    stats: {attack: 170, defence: 100 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/5053103.jpg",
     description: "Un guerrier mi-homme mi-bœuf, fort et courageux. Il fonce droit sur ses ennemis avec sa hache."
   },
@@ -99,7 +99,7 @@ export const creatures = [
     type: "Dieu Créateur",
     icon: icons.creatorGod,
     level: "Niveau 10",
-    stats: { hp: 1000, attack: 250, defence: 250 },
+    stats: { attack: 250, defence: 250 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/10000040.jpg",
     description: "Un dieu très rare qui a créé la lumière. Personne n'ose le défier."
   },
@@ -109,7 +109,7 @@ export const creatures = [
     type: "Cyberse",
     icon: icons.cyberse,
     level: "Niveau 5",
-    stats: { hp: 650, attack: 160, defence: 110 },
+    stats: {attack: 160, defence: 110 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/5043010.jpg",
     description: "Un dragon numérique qui vit dans les réseaux. Il protège le monde virtuel contre les intrus."
   },
@@ -119,7 +119,7 @@ export const creatures = [
     type: "Dinosaure",
     icon: icons.dinosaur,
     level: "Niveau 8",
-    stats: { hp: 900, attack: 240, defence: 180 },
+    stats: {attack: 240, defence: 180 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/18013090.jpg",
     description: "Un énorme dinosaure qui fait trembler le sol. Quand il attaque, rien ne l'arrête."
   },
@@ -129,7 +129,7 @@ export const creatures = [
     type: "Bête Divine",
     icon: icons.divineBeast,
     level: "Niveau 10",
-    stats: { hp: 1000, attack: 300, defence: 200 },
+    stats: { attack: 300, defence: 200 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/10000020.jpg",
     description: "Une bête sacrée qui vole au-dessus des nuages. Plus ses ennemis sont nombreux, plus elle devient forte."
   },
@@ -139,7 +139,7 @@ export const creatures = [
     type: "Dragon",
     icon: icons.dragon,
     level: "Niveau 8",
-    stats: { hp: 850, attack: 300, defence: 250 },
+    stats: {attack: 300, defence: 250 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/89631139.jpg",
     description: "Un dragon légendaire à l'attaque puissante. Il est très rare et très redouté."
   },
@@ -149,7 +149,7 @@ export const creatures = [
     type: "Démon",
     icon: icons.fiend,
     level: "Niveau 10",
-    stats: { hp: 800, attack: 270, defence: 150 },
+    stats: {attack: 270, defence: 150 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/78371393.jpg",
     description: "Un démon qui garde un amour fou pour ses amis. Il devient très dangereux quand on le trahit."
   },
@@ -159,7 +159,7 @@ export const creatures = [
     type: "Poisson",
     icon: icons.fish,
     level: "Niveau 2",
-    stats: { hp: 350, attack: 60, defence: 70 },
+    stats: {attack: 60, defence: 70 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/23771716.jpg",
     description: "Un joli poisson aux sept couleurs. Il nage vite et se cache facilement."
   },
@@ -169,7 +169,7 @@ export const creatures = [
     type: "Insecte",
     icon: icons.insect,
     level: "Niveau 2",
-    stats: { hp: 320, attack: 70, defence: 60 },
+    stats: {attack: 70, defence: 60 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/23434538.jpg",
     description: "Un insecte qui apparaît toujours au mauvais moment. Il est petit, mais difficile à écraser."
   },
@@ -179,7 +179,7 @@ export const creatures = [
     type: "Machine",
     icon: icons.machine,
     level: "Niveau 5",
-    stats: { hp: 650, attack: 180, defence: 120 },
+    stats: {attack: 180, defence: 120 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/70095154.jpg",
     description: "Un dragon de métal qui apparaît quand l'ennemi attaque en premier. Il ne dort jamais."
   },
@@ -189,7 +189,7 @@ export const creatures = [
     type: "Rocheux",
     icon: icons.rock,
     level: "Niveau 3",
-    stats: { hp: 500, attack: 60, defence: 220 },
+    stats: {attack: 60, defence: 220 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/13039848.jpg",
     description: "Un géant de pierre qui ne bouge presque jamais. Il attaque peu mais sa défense est très solide."
   },
@@ -199,7 +199,7 @@ export const creatures = [
     type: "Serpent de mer",
     icon: icons.seaSerpent,
     level: "Niveau 2",
-    stats: { hp: 380, attack: 70, defence: 80 },
+    stats: {attack: 70, defence: 80 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/78868776.jpg",
     description: "Un petit serpent de mer avec une voix magnifique. Son chant attire les créatures de l'océan."
   },
@@ -209,7 +209,7 @@ export const creatures = [
     type: "Magicien",
     icon: icons.spellcaster,
     level: "Niveau 7",
-    stats: { hp: 700, attack: 250, defence: 210 },
+    stats: {attack: 250, defence: 210 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/46986414.jpg",
     description: "Le magicien le plus puissant de son monde. Il utilise la magie pour protéger son maître."
   },
@@ -219,7 +219,7 @@ export const creatures = [
     type: "Tonnerre",
     icon: icons.thunder,
     level: "Niveau 5",
-    stats: { hp: 620, attack: 160, defence: 100 },
+    stats: {attack: 160, defence: 100 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/31786629.jpg",
     description: "Un dragon qui crée des éclairs avec ses ailes. Quand il rugit, le ciel devient noir."
   },
@@ -229,7 +229,7 @@ export const creatures = [
     type: "Guerrier",
     icon: icons.warrior,
     level: "Niveau 7",
-    stats: { hp: 750, attack: 230, defence: 130 },
+    stats: {attack: 230, defence: 130 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/6368038.jpg",
     description: "Un chevalier courageux qui charge à cheval avec sa lance. Il n'a jamais peur, même face à un dragon."
   },
@@ -239,7 +239,7 @@ export const creatures = [
     type: "Bête Ailée",
     icon: icons.wingedBeast,
     level: "Niveau 4",
-    stats: { hp: 480, attack: 130, defence: 90 },
+    stats: {attack: 130, defence: 90 },
     image: "https://images.ygoprodeck.com/images/cards_cropped/76812113.jpg",
     description: "Une belle harpie qui vole très vite. Elle attaque en groupe avec ses sœurs."
   }

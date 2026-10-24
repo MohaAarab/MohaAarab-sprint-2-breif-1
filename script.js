@@ -6,17 +6,13 @@ import { creatures } from "./data.js";
 // Écrivez votre code ici, fonctionnalité par fonctionnalité.
 // Une carte GitHub Projects et au moins un commit par fonctionnalité.
 
-
-// -------------------------------------------------------------
 // 1. AFFICHAGE
-// Supprimez les cartes écrites à la main dans index.html et
-// construisez la grille à partir du tableau `creatures`.
-// -------------------------------------------------------------
 
 function affich(list = creatures) {
-    const container = document.querySelector('#grid');
-
-  container.innerHTML = list.map((creature) => `
+  const container = document.querySelector("#grid");
+  container.innerHTML = list
+    .map(
+      (creature) => `
     <article data-id="${creature.id}" class="cursor-pointer flex flex-col gap-3 rounded-card bg-ground border-4 border-brand-light p-3 pb-4 transition duration-300 hover:-translate-y-2 shadow-[0_0_30px_rgba(250,204,21,0.6)] hover:shadow-[0_0_45px_rgba(250,204,21,0.9)]">
       <div class="card-img relative flex h-64 items-center justify-center rounded-xl bg-brand-light">
         <img class="h-full w-full rounded-xl object-cover" src="${creature.image}" alt="${creature.name}" loading="lazy">
@@ -34,34 +30,28 @@ function affich(list = creatures) {
       <p class="cre-niv text-sm text-muted">${creature.level}</p>
       <button type="button" data-id="${creature.id}" class="btn-add btn-outline bg-brand text-line border-solid border-brand-light mt-auto shadow-[0_0_25px_rgba(250,204,21,0.6)]">Ajouter à l'équipe</button>
     </article>
-  `).join('');
+  `,
+    )
+    .join("");
 
-  document.querySelector('#creature-count').textContent = creatures.length;
+  document.querySelector("#creature-count").textContent = creatures.length;
 }
 
 affich();
 
-
-// -------------------------------------------------------------
 // 2. DÉTAIL
-// Un clic sur une carte ouvre le panneau de détail :
-// image, description, et statistiques affichées en barres.
-// -------------------------------------------------------------
 
+function detail(creature) {
+  const max = 5000;
+  const hpPerc = Math.min(100, (creature.stats.hp / max) * 100);
+  const attPerc = (creature.stats.attack / max) * 100;
+  const defPerc = (creature.stats.defence / max) * 100;
 
+  const detail = document.querySelector("#detail");
+  detail.classList.remove("hidden");
+  detail.innerHTML = "";
 
-function detail(creature){
-const max = 5000; 
-  const hpPerc = Math.min(100,creature.stats.hp / max * 100);
-  const attPerc = creature.stats.attack / max * 100;
-  const defPerc = creature.stats.defence / max * 100;
-    
-    
-    const detail=document.querySelector('#detail')
-    detail.classList.remove('hidden');
-    detail.innerHTML=""
-    
-    detail.innerHTML=`
+  detail.innerHTML = `
         <section  aria-label="Détail de la créature" class="flex flex-col gap-4 rounded-card border-4 border-brand-light bg-ground p-4 md:p-6 "style="box-shadow: 0 0 30px rgba(250, 204, 21, 0.6);">  
           <div class="flex items-center justify-between">
             <span class="font-mono text-sm text-muted">${creature.id} · Détail</span>
@@ -76,7 +66,6 @@ const max = 5000;
           </div>
           <p class="text-cream">${creature.description}</p>
           <div class="flex flex-col gap-2 text-sm text-cream">
-            <div class="grid grid-cols-[80px_1fr_40px] items-center gap-2"><span class="font-bold">HP</span><span class="h-3 rounded-full bg-ground"><span class="block h-3 rounded-full bg-brand" style="width: ${hpPerc}%"></span></span><span class="text-right font-mono">${creature.stats.hp}</span></div>
             <div class="grid grid-cols-[80px_1fr_40px] items-center gap-2"><span class="font-bold">Attaque</span><span class="h-3 rounded-full bg-ground"><span class="block h-3 rounded-full bg-brand" style="width: ${attPerc}%"></span></span><span class="text-right font-mono">${creature.stats.attack}</span></div>
             <div class="grid grid-cols-[80px_1fr_40px] items-center gap-2"><span class="font-bold">Défense</span><span class="h-3 rounded-full bg-ground"><span class="block h-3 rounded-full bg-brand" style="width: ${defPerc}%"></span></span><span class="text-right font-mono">${creature.stats.defence}</span></div>
           </div>
@@ -84,64 +73,51 @@ const max = 5000;
         </section>
 
 
-    `
+    `;
 }
 
-
 // event listner
-const grid=document.querySelector('#grid')
+const grid = document.querySelector("#grid");
 
-grid.addEventListener('click',(e) =>{
-    const card=e.target.closest('article')   
-    if(!card) return
+grid.addEventListener("click", (e) => {
+  const card = e.target.closest("article");
+  if (!card) return;
 
-    const id=card.dataset.id
-    creatures.forEach((creature)=>{
-        if(creature.id === id){
-           detail(creature)
-        }
-    })
-})
+  const id = card.dataset.id;
+  creatures.forEach((creature) => {
+    if (creature.id === id) {
+      detail(creature);
+    }
+  });
+});
 // event listner fo the close button
-const detailPanel = document.querySelector('#detail')
+const detailPanel = document.querySelector("#detail");
 
-detailPanel.addEventListener('click', (e) => {
-  if (e.target.closest('.btn-close')) {
-    detailPanel.classList.add('hidden')
+detailPanel.addEventListener("click", (e) => {
+  if (e.target.closest(".btn-close")) {
+    detailPanel.classList.add("hidden");
   }
-})
+});
 
-// -------------------------------------------------------------
-// 3. RECHERCHE
-// La liste se met à jour pendant la saisie d'un nom
-// (sans tenir compte des majuscules).
-// -------------------------------------------------------------
-const rech=document.querySelector('#search');
-const tpSelect=document.querySelector('#typeFilter')
+// 3. RECHERCHE AND FILTER
 
-function searchFilter(){
+const rech = document.querySelector("#search");
+const tpSelect = document.querySelector("#typeFilter");
 
-    const text = rech.value.toLowerCase().trim();
-    const type = tpSelect.value;
-    
-      const res=creatures.filter((creature)=>{
-         const perName= creature.name.toLowerCase().includes(text)
-         const perType= type === 'Tous' || creature.type === type
+function searchFilter() {
+  const text = rech.value.toLowerCase().trim();
+  const type = tpSelect.value;
 
-         return perName && perType
-      })
-      affich(res)
-  }
-  rech.addEventListener('input', searchFilter)
-  tpSelect.addEventListener('change', searchFilter)
+  const res = creatures.filter((creature) => {
+    const perName = creature.name.toLowerCase().includes(text);
+    const perType = type === "Tous" || creature.type === type;
 
-// -------------------------------------------------------------
-// 4. FILTRE
-// Les boutons de type n'affichent que les créatures de ce type ;
-// « Tous » réinitialise le filtre.
-// La recherche et le filtre fonctionnent ENSEMBLE.
-// -------------------------------------------------------------
-
+    return perName && perType;
+  });
+  affich(res);
+}
+rech.addEventListener("input", searchFilter);
+tpSelect.addEventListener("change", searchFilter);
 
 // -------------------------------------------------------------
 // 5. CRÉER UNE CRÉATURE
@@ -149,7 +125,91 @@ function searchFilter(){
 // (voir le tableau du brief). Affichez le message d'erreur sous le
 // champ, et n'ajoutez jamais une créature invalide.
 // -------------------------------------------------------------
+// error display function
+function error(id, msg) {
+  const errorEL = document.getElementById(id);
+  errorEL.innerHTML = msg;
+  errorEL.style.display = "block";
+}
 
+// the validation fuction
+function valid(event) {
+  event.preventDefault();
+
+  const id = document.querySelector("#id").value.trim();
+  const name = document.querySelector("#name").value.trim();
+  // const type=document.querySelector('#type')
+  // const hp=document.querySelector('#hp')
+  const attack = document.querySelector("#attack").value.trim();
+  const defence = document.querySelector("#defence").value.trim();
+  // const img=document.querySelector('#img')
+
+  const regex = /^#\d{3}$/;
+  let isValid = true;
+
+  // id validation
+  if (id === "") {
+    error("idError", "id required");
+    document.querySelector('#id').classList.remove('border-brand-light')
+    document.querySelector('#id').classList.add("border-red-600");
+    isValid = false;
+  } else if (!regex.test(id)) {
+    error("idError", "the id should be a # followed by 3 numbers");
+    document.querySelector('#id').classList.remove('border-brand-light')
+    document.querySelector('#id').classList.add("border-red-600");
+    isValid = false;
+  }
+
+  // name validation
+  if (name === "") {
+    error("nameError", "name is required");
+    document.querySelector('#name').classList.remove('border-brand-light')
+    document.querySelector('#name').classList.add("border-red-600");
+    isValid = false;
+
+  } else if (name.length <= 3) {
+    error("nameError", "name should be at least 3 letters");
+    document.querySelector('#name').classList.remove('border-brand-light')
+    document.querySelector('#name').classList.add("border-red-600");
+    isValid = false;
+  }
+
+  // attack validation
+  if (attack === "") {
+    error("attackError", "stats is required");
+    document.querySelector('#attack').classList.remove('border-brand-light')
+    document.querySelector('#attack').classList.add("border-red-600");
+    isValid = false;
+  } else if (attack.parseInt() > 5000) {
+    error("attackError", "the max stats is 5000");
+    document.querySelector('#attack').classList.remove('border-brand-light')
+    document.querySelector('#attack').classList.add("border-red-600");
+    isValid = false;
+  }
+
+  // defence validation
+  if (defence === "") {
+    error("defenceError", "stats is required");
+    document.querySelector('#defence').classList.remove('border-brand-light')
+    document.querySelector('#defence').classList.add("border-red-600");
+    isValid = false;
+  } else if (defence.parseInt() > 5000) {
+    error("defenceError", "the max stats is 5000");
+    document.querySelector('#defence').classList.remove('border-brand-light')
+    document.querySelector('#defence').classList.add("border-red-600");
+    isValid = false;
+  }
+
+  if (valid) {
+    alert("the form is submitted");
+  }
+}
+
+function formValidation() {
+  const form = document.querySelector("#creature-form");
+  form.addEventListener("submit", valid);
+}
+formValidation();
 
 // -------------------------------------------------------------
 // 6. MON ÉQUIPE
@@ -157,13 +217,11 @@ function searchFilter(){
 // écouteur sur la grille et UN SEUL sur l'équipe (délégation).
 // -------------------------------------------------------------
 
-
 // -------------------------------------------------------------
 // 7. RÈGLES DE L'ÉQUIPE
 // 6 créatures au maximum, pas de doublon, un message clair quand
 // une action est refusée, et un compteur (x/6).
 // -------------------------------------------------------------
-
 
 // -------------------------------------------------------------
 // BONUS : LocalStorage, Fetch API, tri, comparaison
